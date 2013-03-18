@@ -5,14 +5,14 @@ Initial version checks for new tweets every 5 seconds.
 # Steps to Install
 
 1. Add ```*www.instapaper.com*``` to your Fluid Whitelist.
-![Whitelist](http://cl.ly/NegE)
+![Whitelist](http://f.cl.ly/items/1p1M1e0I3p1a3h130d3S/url%20whitelist.png)
 You will have to log in the first time you try to save a link.
 
 2. Edit the body style declaration in the [Twitter for minimalist Userstyle](http://craigmod.com/satellite/twitter_for_minimalists/)
 
-```body.logged-in {
-    background-image: none !important;
-    background-color: #333 !important;
-}```
+  ```body.logged-in {
+      background-image: none !important;
+      background-color: #333 !important;
+  }```
 
-This makes sure the Read Later buttons (which are iframes) will not have the dark background.
+  This makes sure the Read Later buttons (which are iframes) will not have the dark background.
