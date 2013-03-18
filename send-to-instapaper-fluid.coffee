@@ -1,18 +1,18 @@
 window.INSTA =
 
   loadLink: ->
-    $('.twitter-timeline-link').each (index, Element) ->
+    $('.js-tweet-text .twitter-timeline-link').each (index, Element) ->
       $parent = $(Element).parents ".content"
       link = encodeURIComponent $(Element).attr("data-expanded-url")
-      linkText = ($(Element).attr("data-expanded-url")).split('/', 3)
+      linkText = $(Element).attr("data-expanded-url")
       desc = encodeURIComponent $(Element).parent(".js-tweet-text").text()
       theLink = "<iframe border=\"0\" scrolling=\"no\" width=\"78\" height=\"17\" allowtransparency=\"true\" frameborder=\"0\"
         style=\"margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;\"
         src=\"http://www.instapaper.com/e2?url="+link+"&description="+desc+"\"
         ></iframe>"
 
-      if $parent.children(".instapaper-link").length < $(".twitter-timeline-link", $parent).length
-        $parent.append "<div class=\"instapaper-link\">"+theLink+"("+linkText[2]+")</div>"
+      if $parent.children(".instapaper-link").length < $(".js-tweet-text .twitter-timeline-link", $parent).length
+        $parent.append "<div class=\"instapaper-link\">"+theLink+"("+linkText+")</div>"
 
   watcher: ->
     if $(".tweet").length > INSTA.tweetNumber
