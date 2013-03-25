@@ -9,7 +9,8 @@ Initial version checks for new tweets every 5 seconds.
 
   You will have to log in the first time you try to save a link.
 
-2. Copy and paste ```send-to-instapaper-fluid.min.js``` into the Userscripts section of Fluid.app
+2. Copy and paste ```send-to-instapaper-fluid.min.js``` into a new Userscript like the one shown below: 
+![Userscript](http://f.cl.ly/items/193y342Z3q2E1B1W0j2P/userscript.png)
 
 3. Edit the body style declaration in the [Twitter for minimalist Userstyle](http://craigmod.com/satellite/twitter_for_minimalists/)
 
