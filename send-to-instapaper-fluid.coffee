@@ -18,9 +18,14 @@ window.INSTA =
     if $(".tweet").length > INSTA.tweetNumber
       INSTA.loadLink()
 
-  init: ->
-    INSTA.loadLink()
-    INSTA.tweetNumber = $(".tweet").length
-    watcherID = setInterval(INSTA.watcher, 5000)
+  jQueryLoader: ->
+    if !(typeof $ is 'undefined')
+      clearInterval(INSTA.watchJqueryLoader)
+      INSTA.loadLink()
+      INSTA.tweetNumber = $(".tweet").length
+      watcherID = setInterval(INSTA.watcher, 5000)
 
-$(document).load INSTA.init()
+  init: ->
+    INSTA.watchJqueryLoader = setInterval(INSTA.jQueryLoader, 100)
+
+window.onload = INSTA.init()
